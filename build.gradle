@@ -1,0 +1,25 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
+sourceCompatibility = '11'
+
+application {
+	mainClass = 'com.mc.addressbook.Application'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+	testImplementation 'org.mockito:mockito-core:4.6.1'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
